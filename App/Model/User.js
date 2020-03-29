@@ -7,7 +7,7 @@
 "use strict"
 
 const Sequelize = require('sequelize');
-const Mongoose  = require('mongoose');
+const Mongoose = require('mongoose');
 
 class User extends Sequelize.Model {
 
@@ -26,6 +26,10 @@ class User extends Sequelize.Model {
     })
   }
 
+  /**
+   * Defining User schema Mongoose
+   * @param {*} connection 
+   */
   static mongoInit(connection) {
     const Schema = connection.Schema;
 
@@ -59,13 +63,13 @@ class User extends Sequelize.Model {
   }
 
   /**
-   * Handler OverwriteModelError  create sequelize 
+   * Handler OverwriteModelError method sequelize query
    * Create method create mongoose model
    * Defalt sequelize
    * @param {*} obj 
    */
   static create(obj) {
-    if (process.env.NOSQL== 'true') {
+    if (process.env.NOSQL == 'true') {
       const user = Mongoose.models.User
       return user.create(obj)
     }
@@ -73,19 +77,27 @@ class User extends Sequelize.Model {
     return super.create(obj)
   }
 
+  /**
+   * OverwriteModel findAll sequelize or Not
+   * @param {*} obj 
+   */
   static findAll(obj) {
     if (process.env.NOSQL == 'true') {
       const user = Mongoose.models.User
 
-      if(typeof obj === 'object')
+      if (typeof obj === 'object')
         return user.find(obj.where)
-      
+
       return user.find(obj)
     }
 
     return super.findAll(obj)
   }
 
+  /**
+   * OverwriteModel findByPk sequelize or Not
+   * @param {*} obj 
+   */
   static findByPk(obj) {
     if (process.env.NOSQL == 'true') {
       const user = Mongoose.models.User
@@ -93,6 +105,35 @@ class User extends Sequelize.Model {
     }
 
     return super.findByPk(obj)
+  }
+
+  /**
+   * OverwriteModel update sequelize or Not
+   * @param {*} obj 
+   * @param {*} id 
+   */
+  static update(obj, id) {
+
+    if (process.env.NOSQL == 'true') {
+      const user = Mongoose.models.User
+      return user.updateOne({ _id: id }, obj)
+    }
+
+    return super.update(obj, { where: { id: id } })
+  }
+
+  /**
+   * OverwriteModel destroy sequelize or Not
+   * @param {*} id 
+   */
+  static destroy(id) {
+
+    if (process.env.NOSQL == 'true') {
+      const user = Mongoose.models.User
+      return user.deleteOne({ _id: id });
+    }
+
+    return super.destroy({ where: { id: id } })
   }
 
   getFullname() {

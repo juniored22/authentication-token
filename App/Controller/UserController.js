@@ -39,9 +39,11 @@ module.exports = {
 
   async findUser(req, res) {
     const { user_id } = req.params;
-    const user    = await User.findByPk(user_id);
-
-    if (!user) {
+    let user = {}
+    
+    try {
+      user    = await User.findByPk(user_id);
+    } catch (error) {
       return res.status(400).json({ error: 'User not found' })
     }
 
@@ -50,18 +52,22 @@ module.exports = {
 
   async updateUser(req, res) {
     const { user_id } = req.params;
-    const { name, email, password } = req.body;
-    const result = await User.update({
-      name: name, email: email, password: password
-    }, {
-      where: {
-        id: {
-          [Op.eq]: user_id
-        }
-      }
-    });
+    const result = await User.update(req.body, user_id);
 
-    return res.json(result)
+    if(result == '1' || result.nModified == 1)
+      return res.status(200).json({ status: 200, message: 'Update success' })
+    
+    return res.status(400).json({ error: 'User not found' })
+  },
+
+  async deleteUser(req, res) {
+    const { user_id } = req.params;
+    const result = await User.destroy(user_id);
+   
+    if(result == '1' || result.deletedCount == 1)
+      return res.status(200).json({ status: 200, message: 'Update success' })
+    
+    return res.status(400).json({ error: 'User not found' })
   }
 
 }

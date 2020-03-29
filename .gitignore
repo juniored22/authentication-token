@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-/node_module
 database.sqlite
 package-lock.json
 
@@ -25,7 +22,7 @@ package-lock.json
 .nfs*
 
 ### Node ###
->>>>>>> 1a00c41... my first commit
+
 # Logs
 logs
 *.log
@@ -81,15 +78,13 @@ typings/
 # Optional eslint cache
 .eslintcache
 
-<<<<<<< HEAD
 # Microbundle cache
 .rpt2_cache/
 .rts2_cache_cjs/
 .rts2_cache_es/
 .rts2_cache_umd/
 
-=======
->>>>>>> 1a00c41... my first commit
+
 # Optional REPL history
 .node_repl_history
 
@@ -120,7 +115,6 @@ dist
 # https://nextjs.org/blog/next-9-1#public-directory-support
 # public
 
-=======
 # next.js build output
 .next
 
@@ -139,7 +133,6 @@ dist/
 .out
 .storybook-out
 
->>>>>>> 1a00c41... my first commit
 # vuepress build output
 .vuepress/dist
 
@@ -152,10 +145,9 @@ dist/
 # DynamoDB Local files
 .dynamodb/
 
-<<<<<<< HEAD
 # TernJS port file
 .tern-port
-=======
+
 # Temporary folders
 tmp/
 temp/
@@ -165,13 +157,10 @@ temp/
 **/*.backup.*
 **/*.back.*
 
-node_modules
-
 *.sublime*
 
 psd
 thumb
 sketch
 
-# End of https://www.gitignore.io/api/node,react,linux
->>>>>>> 1a00c41... my first commit
+

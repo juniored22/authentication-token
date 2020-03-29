@@ -23,7 +23,7 @@
         "password": "xxxx",
         "database": "my_data_base",
         "host": "localhost",
-        "dialect": "sqlite",
+        "dialect": "mysql",
         "logging": false,
         "storage": "database.sqlite",
         "define": {

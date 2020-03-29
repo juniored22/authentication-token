@@ -1,10 +1,10 @@
 'use strict';
-const env           = process.env.NODE_ENV || 'development'
-const config        = require('./config/config')[env];
+const env           = require('dotenv').config()
+const config        = require('./config/config')[process.env.RUN];
 const express       = require('express');
 const app           = express();
 const compression   = require('compression');
-const debug         = require('debug')('log') //DEBUG=log PORT=8080 node index.js
+const debug         = require('debug')('log') //DEBUG=log node index.js
 const Connection    = require('./database/Connection');
 const User          = require('./App/Model/User');
 const bodyParser    = require("body-parser");

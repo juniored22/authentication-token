@@ -56,6 +56,7 @@ module.exports = (app) => {
     app.get('/find/:user_id/user/', UserController.findUser);
     app.post('/create/user', UserController.createUser);
     app.put('/update/:user_id/user/', UserController.updateUser);
+    app.delete('/delete/:user_id/user/', UserController.deleteUser);
 
     /**
      *
