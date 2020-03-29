@@ -51,11 +51,12 @@ module.exports = (app) => {
      * @create
      * @find
      * @findAll
+     * @delete
      */
     app.get('/find-all/users', UserController.findAllUsers);
     app.get('/find/:user_id/user/', UserController.findUser);
     app.post('/create/user', UserController.createUser);
-    app.put('/update/:user_id/user/', UserController.updateUser);
+    app.put('/update/:user_id/user/',encryptPass, UserController.updateUser);
     app.delete('/delete/:user_id/user/', UserController.deleteUser);
 
     /**
