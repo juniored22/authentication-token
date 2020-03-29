@@ -19,7 +19,8 @@ class User extends Sequelize.Model {
       {
         name: Sequelize.DataTypes.STRING,
         email: Sequelize.DataTypes.STRING,
-        password: Sequelize.DataTypes.STRING
+        password: Sequelize.DataTypes.STRING,
+        token: Sequelize.DataTypes.STRING
       }, {
       sequelize: connection, modelName: 'user'
     })

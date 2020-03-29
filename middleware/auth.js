@@ -8,7 +8,7 @@ function encrypt(password) {
 var encrypt_password = async (req, res, next) => {
   if(req.body.password != undefined){
     req.body.password = await encrypt(req.body.password)
-    req.body.token    = await encrypt(req.body.password + req.body.email)
+    req.body.token    = await bcrypt.hash(req.body.password,10)
   }
   next();
 }

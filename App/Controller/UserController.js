@@ -14,7 +14,7 @@ module.exports = {
   async createUser(req, res) {
     const { name, email, password, token } = req.body;
     let user = {}
-
+    
     try {
       user = await User.create({ name, email, password, token });
     } catch (error) {
