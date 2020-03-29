@@ -1,0 +1,39 @@
+{
+  "name": "authentication-token",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "DEBUG=log  NOSQL=false PORT=3000 nodemon index.js",
+    "dev": "DEBUG=log NOSQL=false PORT=3000 nodemon index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bcrypt": "^3.0.8",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "consolidate": "^0.15.1",
+    "cor": "0.0.0",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "html": "^1.0.0",
+    "mariadb": "^2.2.0",
+    "mongoose": "^5.9.1",
+    "mustache": "^4.0.0",
+    "mysql2": "^2.1.0",
+    "pg": "^7.18.1",
+    "pg-hstore": "^2.3.3",
+    "pug": "^2.0.4",
+    "sequelize": "^5.21.3",
+    "sequelize-cli": "^5.5.1",
+    "sqlite3": "^4.1.1"
+  },
+  "devDependencies": {
+    "http-proxy-middleware": "^1.0.1"
+  }
+}

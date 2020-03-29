@@ -1,3 +1,31 @@
+<<<<<<< HEAD
+=======
+/node_module
+database.sqlite
+package-lock.json
+
+
+
+# Created by https://www.gitignore.io/api/node,react,linux
+# Edit at https://www.gitignore.io/?templates=node,react,linux
+
+### Linux ###
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
+
+### Node ###
+>>>>>>> 1a00c41... my first commit
 # Logs
 logs
 *.log
@@ -53,12 +81,15 @@ typings/
 # Optional eslint cache
 .eslintcache
 
+<<<<<<< HEAD
 # Microbundle cache
 .rpt2_cache/
 .rts2_cache_cjs/
 .rts2_cache_es/
 .rts2_cache_umd/
 
+=======
+>>>>>>> 1a00c41... my first commit
 # Optional REPL history
 .node_repl_history
 
@@ -75,6 +106,7 @@ typings/
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 
+<<<<<<< HEAD
 # Next.js build output
 .next
 
@@ -88,6 +120,26 @@ dist
 # https://nextjs.org/blog/next-9-1#public-directory-support
 # public
 
+=======
+# next.js build output
+.next
+
+# nuxt.js build output
+.nuxt
+
+# rollup.js default build output
+dist/
+
+# Uncomment the public line if your project uses Gatsby
+# https://nextjs.org/blog/next-9-1#public-directory-support
+# https://create-react-app.dev/docs/using-the-public-folder/#docsNav
+# public
+
+# Storybook build outputs
+.out
+.storybook-out
+
+>>>>>>> 1a00c41... my first commit
 # vuepress build output
 .vuepress/dist
 
@@ -100,5 +152,26 @@ dist
 # DynamoDB Local files
 .dynamodb/
 
+<<<<<<< HEAD
 # TernJS port file
 .tern-port
+=======
+# Temporary folders
+tmp/
+temp/
+
+### react ###
+.DS_*
+**/*.backup.*
+**/*.back.*
+
+node_modules
+
+*.sublime*
+
+psd
+thumb
+sketch
+
+# End of https://www.gitignore.io/api/node,react,linux
+>>>>>>> 1a00c41... my first commit

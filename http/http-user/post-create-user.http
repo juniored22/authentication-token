@@ -1,0 +1,10 @@
+POST /create/user HTTP/1.1
+Content-Type: application/json
+Host: localhost:3000
+Content-Length: 60
+
+{
+	"name":"edgard",
+	"email":"edgard.junior.dev@gmail.ocm",
+	"password":"1234"
+}

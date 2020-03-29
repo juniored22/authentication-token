@@ -1,0 +1,50 @@
+{
+    "development": {
+        "app": {
+            "port": 3000
+        },
+        "username": "junior",
+        "password": "",
+        "database": "my_data_base",
+        "host": "localhost",
+        "dialect": "sqlite",
+        "logging": false,
+        "storage": "database.sqlite",
+        "define": {
+            "timestamps": true,
+            "underscored": true
+        }
+    },
+    "test": {
+        "app": {
+            "port": 3000
+        },
+        "username": "junior",
+        "password": "xxxx",
+        "database": "my_data_base",
+        "host": "localhost",
+        "dialect": "sqlite",
+        "logging": false,
+        "storage": "database.sqlite",
+        "define": {
+            "timestamps": true,
+            "underscored": true
+        }
+    },
+    "production": {
+        "app": {
+            "port": 3000
+        },
+        "username": "junior",
+        "password": "xxxx",
+        "database": "my_data_base",
+        "host": "localhost",
+        "dialect": "sqlite",
+        "logging": false,
+        "storage": "database.sqlite",
+        "define": {
+            "timestamps": true,
+            "underscored": true
+        }
+    }
+}
