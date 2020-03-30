@@ -30,7 +30,7 @@ module.exports = (app) => {
     app.use('/create/user', paramsRequired.create_user, encryptPass);
 
     app.get('/', function (req, res) {
-        res.status(200).json({status:200, message});
+        res.status(200).json({status:200, message:"OK"});
     });
 
     /**
