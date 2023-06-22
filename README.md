@@ -10,7 +10,7 @@ running service website and api
 npm run dev
 ```
 
-create atbale migration OCM
+create table migration OCM
 ```
     // Schrma
     sequelize migration:create --name=create-users  
